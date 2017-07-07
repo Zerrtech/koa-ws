@@ -1,6 +1,6 @@
 {
-  "name": "koa-ws",
-  "version": "1.0.1",
+  "name": "koa-ws-zerrtech",
+  "version": "1.0.2",
   "keywords": [
     "koa",
     "middleware",
@@ -8,16 +8,16 @@
     "session"
   ],
   "description": "Integrates ws with koa, featuring shared sessions and json-rpc 2.0 protocol",
-  "author": "Marcus Ekwall <marcus.ekwall@gmail.com>",
+  "author": "Israel Shirk <israelshirk@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/mekwall/koa-ws/issues"
+    "url": "https://github.com/zerrtech/koa-ws/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mekwall/koa-ws.git"
+    "url": "git://github.com/zerrtech/koa-ws.git"
   },
-  "homepage": "https://github.com/mekwall/koa-ws",
+  "homepage": "https://github.com/zerrtech/koa-ws",
   "main": "./src/middleware.js",
   "browser": "./src/client.js",
   "scripts": {

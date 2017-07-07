@@ -51,7 +51,7 @@ describe('koa-ws', function () {
 
         it('expect to be able to register a simple server method', function () {
             app.ws.register('hello', function* () {
-                this.result('world');
+                this.result('world!');
             });
             expect(app.ws._methods.hello).to.be.a('function');
         });
@@ -165,7 +165,7 @@ describe('koa-ws', function () {
         it('expect client to recieve result world when hello server method is called', function (done) {
             client.method('hello', function (err, payload) {
                 expect(err).to.be.a('null');
-                expect(payload).to.equal('world');
+                expect(payload).to.equal('world!');
                 done();
             });
         });
