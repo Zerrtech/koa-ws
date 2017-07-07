@@ -18,7 +18,15 @@ function request(debug, socket, data) {
     if (data === '--thump--') {
         debug('← Thump!');
         setTimeout(function () {
-            socket.send('--thump--');
+            try {
+                socket.send('--thump--');
+            } catch (error) {
+                try {
+                    socket.close();
+                } catch (error2) { }
+                debug("Heartbeat failed; disconnected");
+                return;
+            }
         }.bind(this), this._options.heartbeatInterval || 5000);
         return;
     }
